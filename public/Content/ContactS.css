@@ -1,0 +1,15 @@
+body {
+    background-image: url('back4.jpg');
+    background-size: cover; /* This property makes the image cover the entire background */
+    background-repeat: no-repeat; /* This property prevents the image from repeating */
+    background-attachment: fixed; /* This property ensures the image stays fixed in place */
+  }
+  
+.col-lg-6{
+    color: white;
+}
+.text-center{
+    margin-top: 50px;
+    color: white;
+    
+}

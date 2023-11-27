@@ -1,0 +1,60 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-10">
+            <h1><%= title %></h1>
+            <% if(typeof displayName=='string' && displayName) { %>
+                <a href="/showslist/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add a Show </a>
+            <br>
+            <% } %>
+            <br>
+    <table class= "table table-bordered table-striped table-hover">
+    <tr class="d-flex">
+    <% if(typeof displayName=='string' && displayName) { %>
+        <th class="text-center col-4">Title</th>
+        <th class="text-center col-4">Genre</th>
+        <th class="text-center col-4">Rating</th>
+        <th class="text-center col-8">Options</th>
+
+    <% } else { %>
+        <th class="text-center col-6">Title</th>
+        <th class="text-center col-6">Genre</th>
+        <th class="text-center col-6">Rating</th>
+    <% } %>
+
+    </tr>
+   
+   
+    <% for(let count=0; count < ShowList.length; count++) { %>
+        <tr class="d-flex">
+        <% if(typeof displayName=='string' && displayName) { %>
+            <td class="text-center col-4"><%= ShowList[count].title %></td>
+            <td class="text-center col-4"><%= ShowList[count].genre %></td>
+            <td class="text-center col-4"><%= ShowList[count].rating %></td>
+            <td class="text-center col-4">
+                <a href="/showslist/edit/<%= ShowList[count]._id %>"
+                    class="btn btn-primary">
+                    <i class="fas fa-pencil-alt"></i> Edit </a>
+            </td>
+            <td class="text-center col-4">
+                <a href="/showslist/delete/<%= ShowList[count]._id %>"
+                    class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete </a>
+            </td>
+        <% } else { %>
+            <td class="text-center col-6"><%= ShowList[count].title %></td>
+            <td class="text-center col-6"><%= ShowList[count].genre %></td>
+            <td class="text-center col-6"><%= ShowList[count].rating %></td>
+        <% } %>       
+        </tr>
+    <% } %>
+    </table>
+</div>
+</div>
+</main>
+
+
+<% include ../partials/bottom_nav.ejs %>

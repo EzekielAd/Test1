@@ -1,0 +1,41 @@
+body {
+    background-image: url('back3.webp');
+    background-size: cover; /* This property makes the image cover the entire background */
+    background-repeat: no-repeat; /* This property prevents the image from repeating */
+    background-attachment: fixed; /* This property ensures the image stays fixed in place */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  
+  .text-container, .video-container {
+    text-align: center;
+    color: white;
+  }
+  
+  .video-container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Adjust the spacing between the video and image */
+  }
+  
+  .video-container h1 {
+    flex: 1;
+  }
+  
+  video, .profile-image {
+    width: 50%; /* Adjust the size of the video and image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+  }
+  
+  .profile-image {
+    max-width: 37%;
+    border-radius: 50%;
+  }
+  

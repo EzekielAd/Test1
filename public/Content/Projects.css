@@ -1,0 +1,25 @@
+body {
+    background-image: url('back2.png');
+    background-size: cover; /* This property makes the image cover the entire background */
+    background-repeat: no-repeat; /* This property prevents the image from repeating */
+    background-attachment: fixed; /* This property ensures the image stays fixed in place */
+  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.centered-content {
+    text-align: center;
+    margin-right: 50px;
+    color: white;
+}
+
+.profile-image {
+    width: 300px; /* Adjust the image size as needed */
+    height: 300px; /* Adjust the image size as needed */
+    border-radius: 50%; /* Makes the image circular */
+    margin-left: 20px; /* Adjust the spacing between text and image */
+}
